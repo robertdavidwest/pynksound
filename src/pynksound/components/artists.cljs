@@ -1,4 +1,4 @@
-(ns pynksound.components.gigs
+(ns pynksound.components.artists
   (:require [pynksound.state :as state]))
 
 (defn artists

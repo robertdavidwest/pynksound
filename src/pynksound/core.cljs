@@ -1,7 +1,7 @@
 (ns pynksound.core
   (:require [reagent.core :as r]
             [pynksound.components.header :refer [header]]
-            [pynksound.components.gigs :refer [gigs]]
+            [pynksound.components.artists :refer [artists]]
             [pynksound.components.orders :refer [orders]]
             [pynksound.components.footer :refer [footer]]))
 
@@ -9,7 +9,7 @@
   []
   [:div.container
     [header]
-    [gigs]
+    [artists]
     [orders]
     [footer]])
 
