@@ -5,13 +5,13 @@
   []
   [:main
     [:div.gigs
-      (for [{:keys [id img title followers-count desc]} (vals @state/artists)]
+     (for [{:keys [user_id avatar_url username followers_count desc]} (vals @state/artists)]
         [:div.gig
-          {:key id}
-          [:img.gig__artwork {:src img :alt title}]
+          {:key user_id}
+         [:img.gig__artwork {:src avatar_url :alt username}]
           [:div.gig__body
             [:div.gig__title
               [:div.btn.btn--primary.float--right.tooltip {:data-tooltip "Add to Order"}
-              [:i.icon.icon--plus]] title]
-            [:p.gig__price "Followers: " followers-count]\
+              [:i.icon.icon--plus]] username]
+           [:p.gig__price "Followers: " followers_count]\
             [:p.gig__desc desc]]])]])

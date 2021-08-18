@@ -3,7 +3,9 @@
             [pynksound.components.header :refer [header]]
             [pynksound.components.artists :refer [artists]]
             [pynksound.components.orders :refer [orders]]
-            [pynksound.components.footer :refer [footer]]))
+            [pynksound.components.footer :refer [footer]]
+            [pynksound.api :as api]
+            ))
 
 (defn app
   []
@@ -15,6 +17,7 @@
 
 (defn ^:export main
   []
+  (api/fetch-artists)
   (r/render
     [app]
     (.getElementById js/document "app")))
